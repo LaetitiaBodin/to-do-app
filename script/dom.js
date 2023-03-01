@@ -16,3 +16,13 @@ export const todo_update = {
     title : document.querySelector('#update-title'),
     text : document.querySelector('#update-text')
 }
+
+/* DELETE */
+export const todo_delete = {
+    btns_show : document.querySelectorAll('.delete-btn--show'),
+    div : document.querySelector('#delete-div'),
+    form : document.querySelector('#delete-form'),
+    id : document.querySelector('#delete-id'),
+    title : document.querySelector('#delete-title'),
+    text : document.querySelector('#delete-text')
+}

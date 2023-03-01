@@ -114,4 +114,28 @@
         $pdo = dbConnectionOff();
         return null;
     }
+    
+    # CRUD: Delete #
+    function deleteToDo () {
+        $pdo = dbConnectionOn();
+        $delete = $pdo->query(
+            sprintf(
+                'DELETE FROM `%s` 
+                WHERE `id` = %d',
+                $_ENV['tname'],
+                $_POST['id']
+            )
+        );
+        $reorder = $pdo->query(
+            sprintf(
+                'ALTER TABLE `%1$s`
+                DROP `id`;
+                ALTER TABLE `%1$s` 
+                ADD `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST',
+                $_ENV['tname']
+            )
+        );
+        $pdo = dbConnectionOff();
+        return null;
+    }
 ?>

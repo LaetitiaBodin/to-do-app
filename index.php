@@ -27,6 +27,7 @@
         <!-- Update a to-do -->
         <?php require_once 'inc/html-update-to-do.inc.php' ?>
         <!-- Delete a to-do -->
+        <?php require_once 'inc/html-delete-to-do.inc.php' ?>
     </div>
 </body>
 </html>
