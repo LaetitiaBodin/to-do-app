@@ -63,6 +63,25 @@
     function dbConnectionOff () {
         return null;
     }
+
+    # CRUD: Create #
+    function createToDo () {
+        $pdo = dbConnectionOn();
+        $todo = $pdo->prepare(
+            sprintf(
+                'INSERT INTO `%s`
+                    (`title`, `text`)
+                VALUES
+                    (:title, :text)',
+                $_ENV['tname']
+            )
+        )->execute([
+            ':title' => htmlspecialchars($_POST['title']),
+            ':text' => htmlspecialchars($_POST['text'])
+        ]);
+        $pdo = dbConnectionOff();
+        return null;
+    }
     
     # CRUD: Read #
     function readToDos () {

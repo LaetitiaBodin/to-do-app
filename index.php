@@ -21,6 +21,7 @@
 <body class="bg-teal-500 font-sans">
     <div class="container mx-auto relative">
         <!-- Create a new to-do -->
+        <?php require_once 'inc/html-create-to-do.inc.php' ?>
         <!-- Read existing to-dos -->
         <?php require_once 'inc/html-read-to-dos.inc.php' ?>
         <!-- Update a to-do -->
