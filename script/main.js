@@ -1,5 +1,5 @@
-import { toggleDisplay } from "./utils.js";
-import { todo_create } from "./dom.js";
+import { toggleDisplay, editDataset } from "./utils.js";
+import { todo_create, todo_update } from "./dom.js";
 
 window.onload = () => {
     
@@ -12,9 +12,28 @@ window.onload = () => {
     todo_create.form.addEventListener('reset', () => {
         toggleDisplay(todo_create.div);
     });
-    /* The form is blocked */
+    /* The form is blocked if the input values are not valid */
     todo_create.form.addEventListener('submit', event => {
         if (todo_create.title.value.trim() === '' || todo_create.text.value.trim() === '') {
+            event.preventDefault();
+            return false;
+        }
+    });
+    
+    /* UPDATE */
+    /* The form is made visible */
+    /* The form's data is populated with the data belonging to the to-do whose edit button was clicked on */
+    todo_update.btns_show.forEach(btn => btn.addEventListener('click', () => {
+        editDataset(todo_update, btn.dataset.id);
+        toggleDisplay(todo_update.div);
+    }));
+    /* The form is reset */
+    todo_update.form.addEventListener('reset', () => {
+        toggleDisplay(todo_update.div);
+    });
+    /* The form is blocked if the input values are not valid */
+    todo_update.form.addEventListener('submit', event => {
+        if (todo_update.title.value.trim() === '' || todo_update.text.value.trim() === '') {
             event.preventDefault();
             return false;
         }

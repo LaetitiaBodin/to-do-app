@@ -25,6 +25,7 @@
         <!-- Read existing to-dos -->
         <?php require_once 'inc/html-read-to-dos.inc.php' ?>
         <!-- Update a to-do -->
+        <?php require_once 'inc/html-update-to-do.inc.php' ?>
         <!-- Delete a to-do -->
     </div>
 </body>

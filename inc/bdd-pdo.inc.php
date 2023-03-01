@@ -95,4 +95,23 @@
         $pdo = dbConnectionOff();
         return $todos;
     }
+    
+    # CRUD: Update #
+    function updateToDo () {
+        $pdo = dbConnectionOn();
+        $update = $pdo->query(
+            sprintf(
+                'UPDATE `%s`
+                SET `title` = "%s",
+                    `text` = "%s"
+                WHERE `id` = %d',
+                $_ENV['tname'],
+                htmlspecialchars($_POST['title']),
+                htmlspecialchars($_POST['text']),
+                $_POST['id']
+            )
+        );
+        $pdo = dbConnectionOff();
+        return null;
+    }
 ?>
