@@ -63,4 +63,17 @@
     function dbConnectionOff () {
         return null;
     }
+    
+    # CRUD: Read #
+    function readToDos () {
+        $pdo = dbConnectionOn();
+        $todos = $pdo->query(
+            sprintf(
+                'SELECT * FROM `%s`',
+                $_ENV['tname']
+            )
+        )->fetchAll(PDO::FETCH_ASSOC);
+        $pdo = dbConnectionOff();
+        return $todos;
+    }
 ?>

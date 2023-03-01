@@ -550,8 +550,24 @@ video {
   }
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
+}
+
+.-top-\[1rem\] {
+  top: -1rem;
+}
+
+.bottom-\[0rem\] {
+  bottom: 0rem;
+}
+
+.right-\[0rem\] {
+  right: 0rem;
 }
 
 .mx-auto {
@@ -559,8 +575,52 @@ video {
   margin-right: auto;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.flex {
+  display: flex;
+}
+
 .table {
   display: table;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-\[16rem\] {
+  height: 16rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-\[16rem\] {
+  width: 16rem;
+}
+
+.max-w-\[90\%\] {
+  max-width: 90%;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.break-words {
+  overflow-wrap: break-word;
 }
 
 .bg-teal-500 {
@@ -568,6 +628,56 @@ video {
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
 }
 
+.bg-amber-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 211 77 / var(--tw-bg-opacity));
+}
+
+.fill-emerald-700 {
+  fill: #047857;
+}
+
+.fill-rose-700 {
+  fill: #be123c;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
 .font-sans {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .md\:h-\[14rem\] {
+    height: 14rem;
+  }
+
+  .md\:w-\[14rem\] {
+    width: 14rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:h-\[12rem\] {
+    height: 12rem;
+  }
+
+  .xl\:w-\[12rem\] {
+    width: 12rem;
+  }
 }

@@ -20,9 +20,9 @@
 </head>
 <body class="bg-teal-500 font-sans">
     <div class="container mx-auto relative">
-        <h1>To-Do App</h1>
         <!-- Create a new to-do -->
         <!-- Read existing to-dos -->
+        <?php require_once 'inc/html-read-to-dos.inc.php' ?>
         <!-- Update a to-do -->
         <!-- Delete a to-do -->
     </div>
