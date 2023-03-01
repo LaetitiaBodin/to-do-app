@@ -1,3 +1,10 @@
+<?php
+    require_once 'inc/bdd-pdo.inc.php';
+    // If the table used for the app does not exist in mysql, it is created.
+    // Otherwise, the one that already exists is used.
+    dbCreate();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +19,12 @@
     <script src="script/main.js" type="module" defer></script>
 </head>
 <body class="bg-teal-500 font-sans">
-    <h1>To-Do App</h1>
+    <div class="container mx-auto relative">
+        <h1>To-Do App</h1>
+        <!-- Create a new to-do -->
+        <!-- Read existing to-dos -->
+        <!-- Update a to-do -->
+        <!-- Delete a to-do -->
+    </div>
 </body>
 </html>
